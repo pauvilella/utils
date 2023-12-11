@@ -1,0 +1,25 @@
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: example-nginx-external
+  annotations:
+    cert-manager.io/cluster-issuer: example-issuer-name
+    external-dns.alpha.kubernetes.io/hostname: example-nginx-external.example.com
+    kubernetes.io/ingress.class: gce
+spec:
+  rules:
+  - host: example-nginx-external.example.com
+    http:
+      paths:
+      - backend:
+          service:
+            name: example-nginx-external
+            port:
+              number: 80
+        path: /
+        pathType: ImplementationSpecific
+  tls:
+  - hosts:
+    - example-nginx-external.example.com
+    secretName: example-nginx-external.example.com-tls-letsencrypt

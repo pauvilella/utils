@@ -1,0 +1,20 @@
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: example-nginx-internal
+  annotations:
+    external-dns.alpha.kubernetes.io/hostname: example-nginx-internal.example.com
+    kubernetes.io/ingress.class: gce-internal
+spec:
+  rules:
+  - host: example-nginx-internal.example.com
+    http:
+      paths:
+      - backend:
+          service:
+            name: example-nginx-internal
+            port:
+              number: 80
+        path: /
+        pathType: ImplementationSpecific

@@ -1,0 +1,29 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: example-nginx-internal
+  labels:
+    app: example-nginx-internal
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: example-nginx-internal
+  template:
+    metadata:
+      labels:
+        app: example-nginx-internal
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.25
+        ports:
+        - containerPort: 80
+        resources:
+          requests:
+            cpu: 100m
+            memory: 128Mi
+          limits:
+            cpu: 100m
+            memory: 128Mi

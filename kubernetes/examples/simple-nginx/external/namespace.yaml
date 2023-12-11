@@ -1,0 +1,8 @@
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: example-nginx-external
+  labels:
+    kubernetes.io/metadata.name: example-nginx-external
+    istio.io/rev: asm-managed-stable # GKE Anthos Service Mesh
