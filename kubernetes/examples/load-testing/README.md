@@ -3,9 +3,17 @@ Create the server we will use to load test:
 ```bash
 kubectl apply -f server.yaml
 ```
+or
+```bash
+kubectl apply -f https://raw.githubusercontent.com/pauvilella/utils/main/kubernetes/examples/load-testing/server.yaml
+```
 Apply an HPA for that server:
 ```bash
 kubectl apply -f hpa.yaml
+```
+or
+```bash
+kubectl apply -f https://raw.githubusercontent.com/pauvilella/utils/main/kubernetes/examples/load-testing/hpa.yaml
 ```
 Here's a command you can use as a client to generate load to the server:
 ```bash
