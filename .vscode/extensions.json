@@ -38,6 +38,8 @@
     "quicktype.quicktype",
     "pmneo.tsimporter",
     "golang.go",
-    "zxh404.vscode-proto3"
+    "zxh404.vscode-proto3",
+    "vscodevim.vim",
+    "andenetalexander.vim-cheatsheet"
   ]
 }
