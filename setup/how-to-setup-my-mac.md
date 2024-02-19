@@ -48,8 +48,8 @@ This guide will walk through the steps to setup a new Mac for development.
    - `sudo scutil --set ComputerName mvp`
    - `sudo scutil --set HostName mvp`
 2. Change the key repetition speed:
-   - `defaults write -g KeyRepeat -int 1`
-   - `defaults write -g InitialKeyRepeat -int 10`
+   - `defaults write -g KeyRepeat -int 1.15`
+   - `defaults write -g InitialKeyRepeat -int 20`
 3. Install Rosetta: `softwareupdate --install-rosetta`
 4. Install XCode Software and Utils: `xcode-select --install`
 5. Install Oh My Zsh: `sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
@@ -69,3 +69,8 @@ Also installed:
 - Notion
 - Whatsapp
 - Rectangle
+  - Settings: open on login and check for updates.
+Iterm2 settings:
+- Closing settings
+- Install shell integration
+- Make it the default terminal
