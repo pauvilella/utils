@@ -90,6 +90,7 @@ This guide will walk through the steps to setup a new Mac for development.
 3. Brew install (`brew install`) the following apps:
    - `act`
    - `argocd`
+   - `--cask aws-vault`
    - `bat`
    - `dive`
    - `doctl`
