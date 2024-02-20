@@ -122,6 +122,11 @@ This guide will walk through the steps to setup a new Mac for development.
 2. Copy public key to clipboard: `pbcopy < ~/.ssh/id_ed25519.pub`
 3. Add it to the Github Profile.
 
+## Create the folders structure for git repos
+1. Create the `~/git` folder: `mkdir ~/git`
+2. Create the `~/git/pauvilella` folder: `mkdir ~/git/pauvilella`
+3. Clone this repo for example: `git clone git@github.com:pauvilella/utils.git`
+
 ## Install more core apps
 1. Install Rectangle: https://rectangleapp.com/
    - Allow the permissions it requires, and open the app.
