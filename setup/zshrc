@@ -1,0 +1,73 @@
+## Add brew to the PATH ##
+export PATH=/opt/homebrew/bin:$PATH
+
+## Add local scripts (binaries) to the PATH ##
+export PATH=$HOME/.local/bin:$PATH
+
+## Set the Java Home ##
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
+
+## Go Config ##
+export PATH="$PATH:$(go env GOPATH)/bin"
+
+## Path to the oh-my-zsh Installation ##
+export ZSH="$HOME/.oh-my-zsh"
+
+## ZSH Theme ##
+ZSH_THEME="robbyrussell"
+
+## iTerm2 Config ##
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+iterm2_print_user_vars() {
+  KUBECONTEXT=$(CTX=$(kubectl config current-context) 2> /dev/null;if [ $? -eq 0 ]; then echo $CTX;fi)
+  KUBENAMESPACE=$(NS=$(kubectl config view --minify -o json | jq '.contexts[0].context.namespace' | tr -d '"') 2> /dev/null;if [ $? -eq 0 ]; then echo $NS;fi)
+  iterm2_set_user_var kubeContext $KUBECONTEXT
+  iterm2_set_user_var kubeNamespace $KUBENAMESPACE
+}
+
+## Plugins used for zsh ##
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting docker docker-compose)
+
+## Load Oh My Zsh Configuration ##
+source $ZSH/oh-my-zsh.sh
+
+## Terraform ##
+alias tfclean='rm -rf .terraform/ .terraform.lock.hcl .terragrunt-cache'
+alias tfenv='TFENV_ARCH=amd64 tfenv'
+
+## aws-vault ##
+alias awspau='aws-vault exec pau -- aws'
+alias pau='aws-vault exec pau --'
+alias awsmonum='aws-vault exec monum -- aws'
+alias monum='aws-vault exec monum --'
+alias awsdialogaid='aws-vault exec dialogaid -- aws'
+alias dialogaid='aws-vault exec dialogaid --'
+
+## ShPod (get a shell inside the k8s cluster) ##
+alias shpod_create='kubectl apply -f https://k8smastery.com/shpod.yaml'
+alias shpod_connect='kubectl attach -n shpod -it shpod'
+alias shpod_destroy='kubectl delete -f https://k8smastery.com/shpod.yaml'
+
+## Kubectl ##
+export KUBE_EDITOR='/opt/homebrew/bin/nvim'
+source <(kubectl completion zsh)
+
+## Kubernetes Aliases ##
+alias k='kubectl'
+alias kc='kubectx'
+alias kn='kubens'
+
+## NVM Config ##
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+## Git aliases
+git config --global alias.home 'rev-parse --show-toplevel'
+alias gitroot='cd $(git home)'
+
+## Other tools Aliases ##
+alias vim='nvim'
+
+## Autoload bash completion ##
+autoload -U +X bashcompinit && bashcompinit

@@ -31,7 +31,11 @@ This guide will walk through the steps to setup a new Mac for development.
 1. Install iTerm2: https://iterm2.com/downloads.html
    - Open it, allow notifications, install required software if it prompts for it, etc.
    - Go to settings, on the `General` -> `Closing` tab, check the `Quit when all windows are closed` option and uncheck all the other ones.
-   - Import profile json from this repo [file](./pauvilella_iterm2_profile.json)
+   - Import profile json from this repo [file](./pauvilella_iterm2_profile.json), set it as the default profile and remove the other one.
+   - Set it as the default terminal: `iTerm2 -> Make iTerm2 Default Term`.
+   - Install the shell integration: `iTerm2 -> Install Shell Integration`.
+   - Open a window, we will create a windown arrangement to set as default. Place it with the size and location in the screen where I will want the new windows I open with iTerm2 to be placed. Once we have the position and size correctly set, go to the menu `Window` -> `Save Window Arrangement` and save it with the name *Pau Vilella Arrangement*. I will be set as default since it is the only one. Finally, go to settings, on `General` -> `Startup` tab, and set the `Open Default Window Arrangement` option (leave `Open profiles window` unchecked).
+   -
 2. Install Arc Browser: https://arc.net/
    - Log in with my Arc Browser account and turn on Sync. It should sync all my Spaces, folders, etc.
    - Set is as the default browser.
@@ -60,19 +64,53 @@ This guide will walk through the steps to setup a new Mac for development.
    - `git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions`
    - `git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my- zsh/custom}/plugins/zsh-syntax-highlighting`
 8. Install Homebrew: `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
+9. Download the `.zshrc` file from this repo, located here: [file](./zshrc) and make it our default `.zshrc` file: `cat Downloads/zshrc > ~/.zshrc`
 
 ## Update and restard the Mac after the initial setup
 1. Go to the `General -> Software Update` section and, on `Automatic Updates`, check the `Install macOS updates` option.
 2. Update the Mac to the latest version.
 3. Restart the Mac.
 
+## Install more core apps
+1. Install Rectangle: https://rectangleapp.com/
+   - Allow the permissions it requires, and open the app.
+   - Go to the settings and set it to `Launch on login` and `Check for updates automatically`.
+2. Install Notion: https://www.notion.so/desktop and login it with my Google Account.
+3. Install Whatsapp: https://www.whatsapp.com/download (will redirect to the App Store). Sync the new Mac as a new device with my phone.
 
-Also installed:
-- Notion
-- Whatsapp
-- Rectangle
-  - Settings: open on login and check for updates.
-Iterm2 settings:
-- Closing settings
-- Install shell integration
-- Make it the default terminal
+## Substitute the .zshrc file with the one from this repo
+1. Download the `.zshrc` file from this repo, located here:
+
+## Install the following apps with Homebrew
+1. Update brew: `brew update`
+2. Add the following taps:
+   - `brew tap mongodb/brew`
+3. Brew install (`brew install`) the following apps:
+   - `act`
+   - `argocd`
+   - `bat`
+   - `top`
+   - `dive`
+   - `doctl`
+   - `ffmpeg`
+   - `gh`
+   - `golangci-lint`
+   - `helm`
+   - `htop`
+   - `httping`
+   - `ipcalc`
+   - `jq`
+   - `kubectx`
+   - `mongodb-database-tools`
+   - `mongosh`
+   - `neovim`
+   - `poetry`
+   - `pre-commit`
+   - `telnet`
+   - `terragrunt`
+   - `tfenv`
+   - `tflint`
+   - `tree`
+   - `wget`
+   - `yarn`
+   - `yq`
