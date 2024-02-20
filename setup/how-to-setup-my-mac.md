@@ -95,7 +95,6 @@ This guide will walk through the steps to setup a new Mac for development.
    - `doctl`
    - `ffmpeg`
    - `gh`
-   - `golangci-lint`
    - `helm`
    - `htop`
    - `httping`
