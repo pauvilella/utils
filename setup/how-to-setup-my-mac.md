@@ -156,12 +156,9 @@ This guide will walk through the steps to setup a new Mac for development.
 3. Install Docker Desktop: https://www.docker.com/products/docker-desktop/
 4. Install XCode from the Apple Store.
 5. Install Apple Developer app from the Apple Store.
-
-
-6. Install Android Studio: https://developer.android.com/studio
-7. Install Postman: https://www.postman.com/downloads/
-8. Install Lens: https://k8slens.dev/
-9.  Install Mongo Compass: https://www.mongodb.com/products/tools/compass
-10. Install Notion: https://www.notion.so/desktop and login it with my Google Account.
-11. Install Whatsapp: https://www.whatsapp.com/download (will redirect to the App Store). Sync the new Mac as a new device with my phone.
-12. Install Discord: https://discord.com/download
+6. Install Postman: https://www.postman.com/downloads/
+7. Install Lens: https://k8slens.dev/
+8.  Install Mongo Compass: https://www.mongodb.com/products/tools/compass
+9. Install Notion: https://www.notion.so/desktop and login it with my Google Account.
+10. Install Whatsapp: https://www.whatsapp.com/download (will redirect to the App Store). Sync the new Mac as a new device with my phone.
+11. Install Discord: https://discord.com/download
