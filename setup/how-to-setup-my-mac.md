@@ -113,5 +113,4 @@ This guide will walk through the steps to setup a new Mac for development.
    - `tflint`
    - `tree`
    - `wget`
-   - `yarn`
    - `yq`
