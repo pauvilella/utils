@@ -26,7 +26,6 @@ This guide will walk through the steps to setup a new Mac for development.
    - Calendar
    - Weather
 
-
 ## Install most basic Apps
 1. Install iTerm2: https://iterm2.com/downloads.html
    - Open it, allow notifications, install required software if it prompts for it, etc.
