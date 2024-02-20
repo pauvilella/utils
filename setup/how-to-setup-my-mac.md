@@ -85,6 +85,8 @@ This guide will walk through the steps to setup a new Mac for development.
 
 ## Install nvm
 1. Install nvm: `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash`
+2. Install the latest LTS version of node or the one needed, in my case it is `v20`: `nvm install v20`
+3. Then set the alias default: `nvm alias default 20`
 
 ## Install the following apps with Homebrew
 1. Update brew: `brew update`
@@ -117,3 +119,7 @@ This guide will walk through the steps to setup a new Mac for development.
    - `tree`
    - `wget`
    - `yq`
+
+## Install the latest version of terraform with tfenv:
+1. In my case, it is the verison `1.7.3`, change it to be the latest or the one that I need to install: `tfenv install 1.7.3`
+2. Use the new version as the default one: `tfenv use 1.7.3`

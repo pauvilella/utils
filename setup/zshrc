@@ -1,4 +1,4 @@
-## Add brew to the PATH ##
+## Add Brew to the PATH ##
 export PATH=/opt/homebrew/bin:$PATH
 
 ## Add local scripts (binaries) to the PATH ##
@@ -33,7 +33,6 @@ source $ZSH/oh-my-zsh.sh
 
 ## Terraform ##
 alias tfclean='rm -rf .terraform/ .terraform.lock.hcl .terragrunt-cache'
-alias tfenv='TFENV_ARCH=amd64 tfenv'
 
 ## aws-vault ##
 alias awspau='aws-vault exec pau -- aws'
