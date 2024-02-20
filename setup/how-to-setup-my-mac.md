@@ -139,9 +139,8 @@ This guide will walk through the steps to setup a new Mac for development.
    - Set the git configs:
      - `git config --global user.name "Pau Vilella"`
      - `git config --global user.email "pau.vilella.st@gmail.com"`
-   - Setup pinentry-mac as the pinentry program: `echo "pinentry-program /usr/local/bin/pinentry-mac" >> ~/.gnupg/gpg-agent.conf` so we will be prompted with a GUI to enter the passphrase when signing commits.
+   - Setup pinentry-mac as the pinentry program: `echo "pinentry-program /opt/homebrew/bin/pinentry-mac" >> ~/.gnupg/gpg-agent.conf` so we will be prompted with a GUI to enter the passphrase when signing commits.
    - Restart the gpg-agent: `gpgconf --kill gpg-agent`
-   - Disable the option of storing the password in the MacOS keychain: `defaults write org.gpgtools.common DisableKeychain -bool yes`
 
 ## Create the folders structure for git repos
 1. Create the `~/git` folder: `mkdir ~/git`
