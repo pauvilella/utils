@@ -25,6 +25,9 @@ iterm2_print_user_vars() {
   iterm2_set_user_var kubeNamespace $KUBENAMESPACE
 }
 
+## GPG config ##
+export GPG_TTY=$(tty)
+
 ## Plugins used for zsh ##
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting docker docker-compose)
 
