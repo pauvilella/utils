@@ -138,7 +138,7 @@ This guide will walk through the steps to setup a new Mac for development.
    - `git config --global commit.gpgsign true`
    - Set the git configs:
      - `git config --global user.name "Pau Vilella"`
-     - `git config --global user.email "pau.vilella.st@gmail.com`
+     - `git config --global user.email "pau.vilella.st@gmail.com"`
 
 ## Create the folders structure for git repos
 1. Create the `~/git` folder: `mkdir ~/git`
