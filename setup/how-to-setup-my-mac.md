@@ -71,13 +71,6 @@ This guide will walk through the steps to setup a new Mac for development.
 2. Update the Mac to the latest version.
 3. Restart the Mac.
 
-## Install more core apps
-1. Install Rectangle: https://rectangleapp.com/
-   - Allow the permissions it requires, and open the app.
-   - Go to the settings and set it to `Launch on login` and `Check for updates automatically`.
-2. Install Notion: https://www.notion.so/desktop and login it with my Google Account.
-3. Install Whatsapp: https://www.whatsapp.com/download (will redirect to the App Store). Sync the new Mac as a new device with my phone.
-
 ## Install go
 1. Go to https://go.dev/dl/ and download the package for MacOS ARM64.
 2. Install gotests: `go install github.com/cweill/gotests/gotests@latest`
@@ -123,3 +116,24 @@ This guide will walk through the steps to setup a new Mac for development.
 ## Install the latest version of terraform with tfenv:
 1. In my case, it is the verison `1.7.3`, change it to be the latest or the one that I need to install: `tfenv install 1.7.3`
 2. Use the new version as the default one: `tfenv use 1.7.3`
+
+## Create a new SSH key and upload it to the Github Profile
+1. Create a new SSH key: `ssh-keygen -t ed25519 -C mvp`
+2. Copy public key to clipboard: `pbcopy < ~/.ssh/id_ed25519.pub`
+3. Add it to the Github Profile.
+
+## Install more core apps
+1. Install Rectangle: https://rectangleapp.com/
+   - Allow the permissions it requires, and open the app.
+   - Go to the settings and set it to `Launch on login` and `Check for updates automatically`.
+2. Install Visual Studio Code
+3. Install Docker Desktop: https://www.docker.com/products/docker-desktop/
+4. Install XCode from the Apple Store.
+5. Install Apple Developer app from the Apple Store.
+6. Install Android Studio: https://developer.android.com/studio
+7. Install Notion: https://www.notion.so/desktop and login it with my Google Account.
+8. Install Whatsapp: https://www.whatsapp.com/download (will redirect to the App Store). Sync the new Mac as a new device with my phone.
+9. Install Postman: https://www.postman.com/downloads/
+10. Install Lens: https://k8slens.dev/
+11. Install Mongo Compass: https://www.mongodb.com/products/tools/compass
+12. Install Discord: https://discord.com/download
