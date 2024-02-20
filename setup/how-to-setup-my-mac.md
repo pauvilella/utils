@@ -136,8 +136,6 @@ This guide will walk through the steps to setup a new Mac for development.
    - Copy the `sec` of the key
    - `git config --global user.signingkey <SEC_OF_OUR_KEY>`
    - `git config --global commit.gpgsign true`
-   -
-
 
 ## Create the folders structure for git repos
 1. Create the `~/git` folder: `mkdir ~/git`
@@ -148,7 +146,7 @@ This guide will walk through the steps to setup a new Mac for development.
 1. Install Rectangle: https://rectangleapp.com/
    - Allow the permissions it requires, and open the app.
    - Go to the settings and set it to `Launch on login` and `Check for updates automatically`.
-2. Install Visual Studio Code
+2. Install Visual Studio Code: https://code.visualstudio.com/download
 3. Install Docker Desktop: https://www.docker.com/products/docker-desktop/
 4. Install XCode from the Apple Store.
 5. Install Apple Developer app from the Apple Store.
