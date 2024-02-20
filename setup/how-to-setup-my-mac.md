@@ -104,6 +104,7 @@ This guide will walk through the steps to setup a new Mac for development.
    - `mongodb-database-tools`
    - `mongosh`
    - `neovim`
+   - `pinentry-mac`
    - `poetry`
    - `pre-commit`
    - `telnet`
