@@ -30,6 +30,8 @@ This guide will walk through the steps to setup a new Mac for development.
 ## Install most basic Apps
 1. Install iTerm2: https://iterm2.com/downloads.html
    - Open it, allow notifications, install required software if it prompts for it, etc.
+   - Go to settings, on the `General` -> `Closing` tab, check the `Quit when all windows are closed` option and uncheck all the other ones.
+   - Import profile json from this repo [file](./pauvilella_iterm2_profile.json)
 2. Install Arc Browser: https://arc.net/
    - Log in with my Arc Browser account and turn on Sync. It should sync all my Spaces, folders, etc.
    - Set is as the default browser.
