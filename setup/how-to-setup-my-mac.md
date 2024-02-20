@@ -83,6 +83,9 @@ This guide will walk through the steps to setup a new Mac for development.
 2. Install gotests: `go install github.com/cweill/gotests/gotests@latest`
 3. Install golangci-lint: `curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b $(go env GOPATH)/bin v1.56.2`
 
+## Install nvm
+1. Install nvm: `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash`
+
 ## Install the following apps with Homebrew
 1. Update brew: `brew update`
 2. Add the following taps:
