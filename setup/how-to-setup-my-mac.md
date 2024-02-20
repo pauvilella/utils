@@ -78,9 +78,10 @@ This guide will walk through the steps to setup a new Mac for development.
 2. Install Notion: https://www.notion.so/desktop and login it with my Google Account.
 3. Install Whatsapp: https://www.whatsapp.com/download (will redirect to the App Store). Sync the new Mac as a new device with my phone.
 
-## Substitute the .zshrc file with the one from this repo
-1. Download the `.zshrc` file from this repo, located here:
-
+## Install go
+1. Go to https://go.dev/dl/ and download the package for MacOS ARM64.
+2. Install gotests: `go install github.com/cweill/gotests/gotests@latest`
+`
 ## Install the following apps with Homebrew
 1. Update brew: `brew update`
 2. Add the following taps:
@@ -89,7 +90,6 @@ This guide will walk through the steps to setup a new Mac for development.
    - `act`
    - `argocd`
    - `bat`
-   - `top`
    - `dive`
    - `doctl`
    - `ffmpeg`
