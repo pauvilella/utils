@@ -122,11 +122,27 @@ This guide will walk through the steps to setup a new Mac for development.
 1. Create a new SSH key: `ssh-keygen -t ed25519 -C mvp`
 2. Copy public key to clipboard: `pbcopy < ~/.ssh/id_ed25519.pub`
 3. Add it to the Github Profile.
+4. Createa a GPG key for signing commits. Following GitHub's instructions: https://docs.github.com/en/authentication/managing-commit-signature-verification/generating-a-new-gpg-key
+   - `gpg --full-generate-key` (Select the default option: `ECC (sign and encrypt)`, the default elyptic curve: `Curve 25519` and 0 for expiration time, which means it does not expire).
+   - Enter the real name: `Pau Vilella` and the email: `pau.vilella.st@gmail.com`. Leave comment in blank.
+   - Set a passphrase (store it on GitHub's 1Password item).
+   - List the keys: `gpg --list-secret-keys --keyid-format=long`
+   - Copy the `sec` field of the key we just created.
+   - Run: `gpg --armor --export <SEC_OF_OUR_KEY>`
+   - Add the printed publik GPG key to the GitHub profile.
+5. Tell git to use the GPG key to sign commits:
+   - `git config --global --unset gpg.format`
+   - `gpg --list-secret-keys --keyid-format=long`
+   - Copy the `sec` of the key
+   - `git config --global user.signingkey <SEC_OF_OUR_KEY>`
+   - `git config --global commit.gpgsign true`
+   -
+
 
 ## Create the folders structure for git repos
 1. Create the `~/git` folder: `mkdir ~/git`
 2. Create the `~/git/pauvilella` folder: `mkdir ~/git/pauvilella`
-3. Clone this repo for example: `git clone git@github.com:pauvilella/utils.git`
+3. Clone this repo for example: `cd ~/git/pauvilella && git clone git@github.com:pauvilella/utils.git`
 
 ## Install more core apps
 1. Install Rectangle: https://rectangleapp.com/
