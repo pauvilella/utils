@@ -1,5 +1,5 @@
 #!/bin/bash
 
-rm .vscode/settings.json .vscode/extensions.json
-cp ~/git/pauvilella/utils/.vscode/settings.json .vscode/settings.json
-cp ~/git/pauvilella/utils/.vscode/extensions.json .vscode/extensions.json
+wget https://raw.githubusercontent.com/pauvilella/utils/main/.vscode/settings.json
+cat settings.json > .vscode/settings.json
+rm settings.json
