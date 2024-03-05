@@ -106,6 +106,7 @@ This guide will walk through the steps to setup a new Mac for development.
    - `pinentry-mac`
    - `poetry`
    - `pre-commit`
+   - `rbenv`
    - `telnet`
    - `terragrunt`
    - `tfenv`
