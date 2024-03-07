@@ -154,6 +154,8 @@ This guide will walk through the steps to setup a new Mac for development.
    - Go to the settings and set it to `Launch on login` and `Check for updates automatically`.
 2. Install Visual Studio Code: https://code.visualstudio.com/download
    - Open it, allow permissions and login with the Github account.
+   - Install shell integration for `code` command: `Shell Command: Install 'code' command in PATH`.
+   - Enable press and hold for VSCode: `defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false`
 3. Install Docker Desktop: https://www.docker.com/products/docker-desktop/
 4. Install XCode from the Apple Store.
 5. Install Apple Developer app from the Apple Store.
