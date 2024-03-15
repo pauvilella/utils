@@ -1,0 +1,28 @@
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: analytics-staging-bluecaffeine-io
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+    dns-zone: private
+    external-dns.alpha.kubernetes.io/hostname: analytics-staging.bluecaffeine.io
+    nginx.ingress.kubernetes.io/upstream-vhost: whapi-staging.caffeine.io
+    nginx.ingress.kubernetes.io/backend-protocol: HTTPS
+spec:
+  ingressClassName: nginx-int
+  rules:
+  - host: analytics-staging.bluecaffeine.io
+    http:
+      paths:
+      - backend:
+          service:
+            name: whapi-legacy-staging
+            port:
+              number: 443
+        path: /
+        pathType: ImplementationSpecific
+  tls:
+  - hosts:
+    - analytics-staging.bluecaffeine.io
+    secretName: analytics-staging.bluecaffeine.io-tls-letsencrypt
