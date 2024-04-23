@@ -115,7 +115,6 @@ This guide will walk through the steps to setup a new Mac for development.
    - `tree`
    - `wget`
    - `yq`
-   -
 
 ## Install the latest version of terraform with tfenv:
 1. In my case, it is the verison `1.7.3`, change it to be the latest or the one that I need to install: `tfenv install 1.7.3`
