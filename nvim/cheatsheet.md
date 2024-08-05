@@ -10,6 +10,7 @@
 `:e filename` : edit file
 `:r filename` : read file (when I'm in a file and I do this command, it will paste the contents of the readed file to my current file)
 `:r !command` : execute command and print the output of the command to my current buffer (e.g.: `:r !ls -la` will paste the outputs of the ls command)
+`:set number` : add line numbers (or `:set nu`)
 
 # Explorator mode
 `%` : Create file
@@ -58,3 +59,5 @@
 `p` : paste below (in normal mode)
 `Shift+p` : paste above (in normal mode)
 `Cmd+v` : paste from mac clipboard (in insert mode)
+
+# Search & Replace (from normal mode)
